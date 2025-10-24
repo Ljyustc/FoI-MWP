@@ -43,11 +43,11 @@ These models solve math problems directly via neural architectures without large
 
 | Cognitive Ability Focused | Representative Work |
 |----------------------------|----------------------|
-| Problem Understanding | [DNS](https://aclanthology.org/D17-1088/), T-RNN, Graph2Tree, Graph2Tree+, GROUPATT, NS-Solver, HMS, KA-S2T, LogicSolver, NumS2T, HGEN, Multi-E/D, EEH-G2T, RPKH, MWP-BERT, TCDP |
-| Logical Organization | GTS, Seq2DAG, CASS, FOMAS, SUMC-Solver, TSN-MD, DEDUCTREASONER, Multi-view, MathDQN |
-| Associative Memory | REAL, RHMS |
-| Critical Thinking | Generate&Rank, WDA, DQGF |
-| Knowledge Learning | CogSolver, LeAp |
+| Problem Understanding | [DNS](https://aclanthology.org/D17-1088/), T-RNN, [Graph2Tree](https://aclanthology.org/2020.acl-main.362/), [Graph2Tree+](https://ieeexplore.ieee.org/document/9721720), [GROUPATT](https://aclanthology.org/P19-1619/), [NS-Solver](https://aclanthology.org/2021.acl-long.456.pdf), [HMS](https://ojs.aaai.org/index.php/AAAI/article/view/16547), [KA-S2T](https://aclanthology.org/2020.emnlp-main.579/), [LogicSolver](https://aclanthology.org/2022.findings-emnlp.1.pdf), [NumS2T](https://aclanthology.org/2021.acl-long.455/), [HGEN](https://ieeexplore.ieee.org/document/9693212), [Multi-E/D](https://aclanthology.org/2020.coling-main.262/), [EEH-G2T](https://aclanthology.org/2021.findings-emnlp.127/), [RPKHS](https://aclanthology.org/2021.emnlp-main.272/), [MWP-BERT](https://aclanthology.org/2022.findings-naacl.74/), [TCDP](https://ieeexplore.ieee.org/document/10113691) |
+| Logical Organization | [GTS](https://www.ijcai.org/proceedings/2019/0736.pdf), [Seq2DAG](https://ojs.aaai.org/index.php/AAAI/article/view/16075), [CASS](https://aclanthology.org/C18-1018/), [FOMAS](https://dl.acm.org/doi/10.1145/3580305.3599375), [SUMC-Solver](https://aclanthology.org/2022.emnlp-main.556/), [TSN-MD](https://www.ijcai.org/proceedings/2020/0555.pdf), [DEDUCTREASONER](https://aclanthology.org/2022.acl-long.410/), [Multi-view](https://aclanthology.org/2022.findings-emnlp.79.pdf), [Multi-E/D](https://aclanthology.org/2020.coling-main.262/), [MathDQN](https://ojs.aaai.org/index.php/AAAI/article/view/11981) |
+| Associative Memory | [REAL](https://aclanthology.org/2021.findings-emnlp.68/), [RHMS](https://ieeexplore.ieee.org/document/10136830) |
+| Critical Thinking | [Generate&Rank](https://aclanthology.org/2021.findings-emnlp.195/), [WDA](https://dl.acm.org/doi/10.1609/aaai.v37i11.26548), [DQGF](https://aclanthology.org/2023.findings-acl.705/) |
+| Knowledge Learning | [CogSolver](https://ieeexplore.ieee.org/document/10027795), [LeAp](https://dl.acm.org/doi/10.1609/aaai.v37i4.25571) |
 
 ---
 
