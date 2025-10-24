@@ -59,10 +59,10 @@ LLM-based solvers utilize language models to perform and explain reasoning. They
 
 | Cognitive Ability Focused | Representative Work |
 |-------------------|-------------------|
-| Logical Organization | Chain-of-Thought (CoT), Tree-of-Thought (ToT), Graph-of-Thought (GoT), Least-to-Most, DeAR, Planning-LM |
-| Associative Memory | Similar-ICL, InfICL, IDS, SPELL, LMS3, RaFe, Retreival-augmented Generation |
-| Critical Thinking | Self-Consistency, Self-Verification, Self-Reflection, CRITIC, CoRe, CEMAL, WizardMath, Xwin-Math, MetaMath |
-| Tool Integration | Program-of-Thought, ToolLlama, PAL, CREATOR, CRAFT, TROVE, KTCE |
+| Logical Organization | [Chain-of-Thought (CoT)](https://dl.acm.org/doi/10.5555/3600270.3602070), [Tree-of-Thought (ToT)](https://dl.acm.org/doi/abs/10.5555/3666122.3666639), [Graph-of-Thought (GoT)](https://dl.acm.org/doi/10.1609/aaai.v38i16.29720), [Least-to-Most](https://arxiv.org/abs/2205.10625), [DeAR](https://dl.acm.org/doi/10.5555/3737916.3737928), [Planning-LM](https://aclanthology.org/2023.acl-long.379.pdf) |
+| Associative Memory | [TopK+ConE](https://aclanthology.org/2024.acl-long.492/), [InfICL](https://arxiv.org/abs/2402.11750), [IDS](https://aclanthology.org/2024.findings-emnlp.438.pdf), [SPELL](https://aclanthology.org/2023.findings-emnlp.679.pdf), [LMS3](https://icml.cc/virtual/2025/poster/43714) |
+| Critical Thinking | [Self-Consistency](https://arxiv.org/abs/2203.11171), [Self-Verification](https://aclanthology.org/2023.findings-emnlp.167.pdf), [Self-Reflection](https://arxiv.org/pdf/2405.06682), [CRITIC](https://arxiv.org/abs/2305.11738), [CoRe](https://aclanthology.org/2023.acl-long.245.pdf), [CEMAL](https://aclanthology.org/2023.emnlp-main.889/), [WizardMath](https://arxiv.org/abs/2308.09583), [Xwin-Math](https://arxiv.org/abs/2405.20335), [MetaMath](https://arxiv.org/abs/2309.12284) |
+| Tool Integration | [Program-of-Thought](https://arxiv.org/abs/2211.12588), [PAL](https://dl.acm.org/doi/10.5555/3618408.3618843), [CREATOR](https://aclanthology.org/2023.findings-emnlp.462.pdf), [CRAFT](https://arxiv.org/abs/2309.17428), [TROVE](https://dl.acm.org/doi/10.5555/3692070.3694168), [KTCE](https://ojs.aaai.org/index.php/AAAI/article/view/34664) |
 
 ---
 
