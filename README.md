@@ -43,7 +43,7 @@ These models solve math problems directly via neural architectures without large
 
 | Cognitive Ability Focused | Representative Work |
 |----------------------------|----------------------|
-| Problem Understanding | DNS, T-RNN, Graph2Tree, Graph2Tree+, GROUPATT, NS-Solver, HMS, KA-S2T, LogicSolver, NumS2T, HGEN, Multi-E/D, EEH-G2T, RPKH, MWP-BERT, TCDP |
+| Problem Understanding | [DNS](https://aclanthology.org/D17-1088/), T-RNN, Graph2Tree, Graph2Tree+, GROUPATT, NS-Solver, HMS, KA-S2T, LogicSolver, NumS2T, HGEN, Multi-E/D, EEH-G2T, RPKH, MWP-BERT, TCDP |
 | Logical Organization | GTS, Seq2DAG, CASS, FOMAS, SUMC-Solver, TSN-MD, DEDUCTREASONER, Multi-view, MathDQN |
 | Associative Memory | REAL, RHMS |
 | Critical Thinking | Generate&Rank, WDA, DQGF |
