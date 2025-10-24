@@ -9,8 +9,7 @@ We summarize, categorize, and compare existing work based on how well they align
 
 ## 🔍 Motivation
 
-Mathematical reasoning is a cognitive process involving problem comprehension, knowledge recall, logical reasoning, and self-reflection.  
-However, most surveys classify models by architecture (e.g., Seq2Seq vs LLMs), lacking a **human-centered cognitive viewpoint**.
+Mathematical reasoning is a cognitive process involving problem comprehension, knowledge recall, logical reasoning, and self-reflection. However, most surveys classify models by architecture (e.g., Seq2Seq vs LLMs), lacking a **human-centered cognitive viewpoint**.
 
 This survey reframes mathematical reasoning research by mapping model designs and reasoning techniques to **five key cognitive abilities**, making the field more interpretable and pedagogically aligned with human learning.
 
@@ -89,25 +88,103 @@ LLM-based solvers utilize language models to perform and explain reasoning. They
 
 ### 📊 Performances of LLM-based Methods on MWP datasets
 
-| Cognitive Ability | Method | Backbone | Math23K | MAWPS | SVAMP | MathQA | GSM8K |
-|------------------|--------|---------|---------|-------|-------|--------|-------|
-| **Logical Organization** | CoT | GPT-3.5 | 85.8 | 91.9 | 88.4 | 79.8 | 87.2 |
-|  | CoT | LLaMA3.1-8B | 83.4 | 92.7 | 88.9 | 80.2 | 87.4 |
-|  | ToT | GPT-3.5 | 86.5 | 92.5 | 89.7 | 80.8 | 88.8 |
-|  | ToT | LLaMA3.1-8B | 84.9 | 93.2 | 90.0 | 81.0 | 89.2 |
-|  | GoT | GPT-3.5 | 86.0 | 93.0 | 90.1 | 80.6 | 87.9 |
-|  | GoT | LLaMA3.1-8B | 84.4 | 93.9 | 90.8 | 81.0 | 88.5 |
-| **Associative Memory** | ICL | GPT-3.5 | 85.9 | 92.8 | 89.9 | 81.1 | 90.8 |
-|  | ICL | LLaMA3.1-8B | 83.7 | 93.3 | 91.0 | 81.5 | 91.3 |
-| **Critical Thinking** | Self-Consistency | GPT-3.5 | 87.0 | 93.1 | 91.7 | 81.4 | 90.5 |
-|  | Self-Consistency | LLaMA3.1-8B | 84.1 | 94.5 | 91.9 | 81.7 | 91.2 |
-|  | Self-Verification | GPT-3.5 | 86.8 | 94.4 | 90.6 | 82.5 | 91.6 |
-|  | Self-Verification | LLaMA3.1-8B | 84.6 | 93.8 | 92.1 | 82.0 | 90.9 |
-| **Tool Integration** | PoT | GPT-3.5 | 88.3 | 95.0 | 93.8 | 84.7 | 92.8 |
-|  | PoT | LLaMA3.1-8B | 85.8 | 95.8 | 93.5 | 85.5 | 92.5 |
-|  | PAL | GPT-3.5 | 87.7 | 95.3 | 92.5 | 83.1 | 93.0 |
-|  | PAL | LLaMA3.1-8B | 86.1 | 96.0 | 93.7 | 82.4 | 93.4 |
-| **Math LLMs** | WizardMath | LLaMA2-7B | 75.2 | 79.5 | 63.2 | 73.5 | 75.1 |
-|  | WizardMath | LLaMA2-70B | 85.8 | 88.6 | 76.4 | 80.1 | 83.8 |
-|  | MetaMath | LLaMA2-7B | 74.4 | 82.4 | 75.8 | 77.6 | 79.2 |
-|  | MetaMath | LLaMA2-70B | 84.5 | 89.3 | 80.6 | 81.0 | 85.3 |
+<table>
+  <thead>
+    <tr>
+      <th>Cognitive Ability</th>
+      <th>Method</th>
+      <th>Backbone</th>
+      <th>Math23K</th>
+      <th>MAWPS</th>
+      <th>SVAMP</th>
+      <th>MathQA</th>
+      <th>GSM8K</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Logical Organization -->
+    <tr>
+      <td rowspan="6"><strong>Logical Organization</strong></td>
+      <td rowspan="2">CoT</td>
+      <td>GPT-3.5</td><td>85.8</td><td>91.9</td><td>88.4</td><td>79.8</td><td>87.2</td>
+    </tr>
+    <tr>
+      <td>LLaMA3.1-8B</td><td>83.4</td><td>92.7</td><td>88.9</td><td>80.2</td><td>87.4</td>
+    </tr>
+    <tr>
+      <td rowspan="2">ToT</td>
+      <td>GPT-3.5</td><td>86.5</td><td>92.5</td><td>89.7</td><td>80.8</td><td>88.8</td>
+    </tr>
+    <tr>
+      <td>LLaMA3.1-8B</td><td>84.9</td><td>93.2</td><td>90.0</td><td>81.0</td><td>89.2</td>
+    </tr>
+    <tr>
+      <td rowspan="2">GoT</td>
+      <td>GPT-3.5</td><td>86.0</td><td>93.0</td><td>90.1</td><td>80.6</td><td>87.9</td>
+    </tr>
+    <tr>
+      <td>LLaMA3.1-8B</td><td>84.4</td><td>93.9</td><td>90.8</td><td>81.0</td><td>88.5</td>
+    </tr>
+
+    <!-- Associative Memory -->
+    <tr>
+      <td rowspan="2"><strong>Associative Memory</strong></td>
+      <td rowspan="2">ICL</td>
+      <td>GPT-3.5</td><td>85.9</td><td>92.8</td><td>89.9</td><td>81.1</td><td>90.8</td>
+    </tr>
+    <tr>
+      <td>LLaMA3.1-8B</td><td>83.7</td><td>93.3</td><td>91.0</td><td>81.5</td><td>91.3</td>
+    </tr>
+
+    <!-- Critical Thinking -->
+    <tr>
+      <td rowspan="4"><strong>Critical Thinking</strong></td>
+      <td rowspan="2">Self-Consistency</td>
+      <td>GPT-3.5</td><td>87.0</td><td>93.1</td><td>91.7</td><td>81.4</td><td>90.5</td>
+    </tr>
+    <tr>
+      <td>LLaMA3.1-8B</td><td>84.1</td><td>94.5</td><td>91.9</td><td>81.7</td><td>91.2</td>
+    </tr>
+    <tr>
+      <td rowspan="2">Self-Verification</td>
+      <td>GPT-3.5</td><td>86.8</td><td>94.4</td><td>90.6</td><td>82.5</td><td>91.6</td>
+    </tr>
+    <tr>
+      <td>LLaMA3.1-8B</td><td>84.6</td><td>93.8</td><td>92.1</td><td>82.0</td><td>90.9</td>
+    </tr>
+
+    <!-- Tool Integration -->
+    <tr>
+      <td rowspan="4"><strong>Tool Integration</strong></td>
+      <td rowspan="2">PoT</td>
+      <td>GPT-3.5</td><td>88.3</td><td>95.0</td><td>93.8</td><td>84.7</td><td>92.8</td>
+    </tr>
+    <tr>
+      <td>LLaMA3.1-8B</td><td>85.8</td><td>95.8</td><td>93.5</td><td>85.5</td><td>92.5</td>
+    </tr>
+    <tr>
+      <td rowspan="2">PAL</td>
+      <td>GPT-3.5</td><td>87.7</td><td>95.3</td><td>92.5</td><td>83.1</td><td>93.0</td>
+    </tr>
+    <tr>
+      <td>LLaMA3.1-8B</td><td>86.1</td><td>96.0</td><td>93.7</td><td>82.4</td><td>93.4</td>
+    </tr>
+
+    <!-- Math LLMs -->
+    <tr>
+      <td rowspan="4"><strong>Math LLMs</strong></td>
+      <td rowspan="2">WizardMath</td>
+      <td>LLaMA2-7B</td><td>75.2</td><td>79.5</td><td>63.2</td><td>73.5</td><td>75.1</td>
+    </tr>
+    <tr>
+      <td>LLaMA2-70B</td><td>85.8</td><td>88.6</td><td>76.4</td><td>80.1</td><td>83.8</td>
+    </tr>
+    <tr>
+      <td rowspan="2">MetaMath</td>
+      <td>LLaMA2-7B</td><td>74.4</td><td>82.4</td><td>75.8</td><td>77.6</td><td>79.2</td>
+    </tr>
+    <tr>
+      <td>LLaMA2-70B</td><td>84.5</td><td>89.3</td><td>80.6</td><td>81.0</td><td>85.3</td>
+    </tr>
+  </tbody>
+</table>
