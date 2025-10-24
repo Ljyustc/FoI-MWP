@@ -1,4 +1,4 @@
-# 🧠 Foundation of Intelligence: Review of Math Word Problems from Human Cognition Perspective (FoI-MWP)
+# Foundation of Intelligence: Review of Math Word Problems from Human Cognition Perspective (FoI-MWP)
 
 > A curated survey of mathematical reasoning research from the perspective of **human cognition**.
 
@@ -16,13 +16,13 @@ This survey reframes mathematical reasoning research by mapping model designs an
 
 ---
 
-## 🧩 Cognitive Framework of Mathematical Reasoning
+## 🧠 Cognitive Framework of Mathematical Reasoning
 
 We identify **five core cognitive abilities** essential for mathematical reasoning:
 
 | Cognitive Ability | Description | Examples in Human Behavior |
 |-------------------|-------------|-----------------------------|
-| 🧠 **Problem Understanding** | Comprehend the problem, extract key information, formalize the goal | Reading, abstraction, problem reformulation |
+| 🧭 **Problem Understanding** | Comprehend the problem, extract key information, formalize the goal | Reading, abstraction, problem reformulation |
 | 🧩 **Logical Organization** | Structure reasoning steps coherently and logically | Step-by-step proofs, structured solution plans |
 | 🔗 **Associative Memory** | Retrieve relevant experiences to solve problems | Recall formulas, known patterns, similar questions |
 | 🧐 **Critical Thinking** | Self-reflection, self-correction, verification, counterfactual reasoning | Check mistakes, refine solutions, compare approaches |
@@ -38,59 +38,76 @@ We categorize mathematical reasoning models into two major families:
 
 ### ✅ 1. **(Small) Neural Network Solvers**
 
-These models solve math problems directly via neural architectures without large-scale language pretraining.
-
-We evaluate them along the five cognitive dimensions above.
+These models solve math problems directly via neural architectures without large-scale language pretraining. They imitate specific cognitive abilities and generate mathematical expressions as solutions.
 
 #### 📍 Representative Papers
 
 | Cognitive Ability Focused | Representative Work |
 |----------------------------|----------------------|
-| Problem Understanding | NSM (Neural Symbolic Machines), MathBERT, TaLM |
-| Logical Organization | Graph2Tree, TreeRNN, NS-Solver |
-| Associative Memory | Memory-Augmented Neural Networks (MANN), Neural Turing Machines |
-| Critical Thinking | ReCheck, Self-Verify NN solvers |
-| Knowledge Learning | DeepMath, Transformers+formal math knowledge, Math-Knowledge Pretraining |
-
-> These works typically learn reasoning patterns implicitly through supervision or structured neural architectures.
+| Problem Understanding | DNS, T-RNN, Graph2Tree, Graph2Tree+, GROUPATT, NS-Solver, HMS, KA-S2T, LogicSolver, NumS2T, HGEN, Multi-E/D, EEH-G2T, RPKH, MWP-BERT, TCDP |
+| Logical Organization | GTS, Seq2DAG, CASS, FOMAS, SUMC-Solver, TSN-MD, DEDUCTREASONER, Multi-view, MathDQN |
+| Associative Memory | REAL, RHMS |
+| Critical Thinking | Generate&Rank, WDA, DQGF |
+| Knowledge Learning | CogSolver, LeAp |
 
 ---
 
-### 🧠 2. **LLM-based Mathematical Reasoning**
+### ✅ 2. **LLM-based Solvers**
 
-LLM-based models utilize pretrained language models to perform and explain reasoning.
+LLM-based solvers utilize language models to perform and explain reasoning. They solve MWPs by generating a rational, within which they unify multiple human cognitive abilities.
 
-We divide them into **General** and **Specialized** directions:
+#### 📍 Representative Papers
 
----
-
-#### 2.1 🌍 **General LLM-based Reasoning Methods**
-
-This branch enhances **inference-time reasoning** of LLMs by stimulating cognitive abilities.
-
-| Cognitive Ability | Method Category | Representative Paper / Method |
-|-------------------|-------------------|--------------------------------|
-| Logical Organization | Chain-of-Thought (CoT), Tree-of-Thought (ToT) | CoT, ToT, Graph-of-Thought |
-| Associative Memory | Retrieval-based CoT, In-context Learning (ICL) | RICL, ReACT, RAG for Math |
-| Critical Thinking | Self-Consistency, Self-Refinement, Debate Models | SC, Reflexion, Socratic CoT |
-| Tool Integration | Program-of-Thought, Toolformer, Calculator/Code Integration | PoT, Toolformer, PAL, Math-Toolformer |
-
-> These methods improve reasoning **without retraining LLMs**, simulating human thinking strategies.
+| Cognitive Ability Focused | Representative Work |
+|-------------------|-------------------|
+| Logical Organization | Chain-of-Thought (CoT), Tree-of-Thought (ToT), Graph-of-Thought (GoT), Least-to-Most, DeAR, Planning-LM |
+| Associative Memory | Similar-ICL, InfICL, IDS, SPELL, LMS3, RaFe, Retreival-augmented Generation |
+| Critical Thinking | Self-Consistency, Self-Verification, Self-Reflection, CRITIC, CoRe, CEMAL, WizardMath, Xwin-Math, MetaMath |
+| Tool Integration | Program-of-Thought, ToolLlama, PAL, CREATOR, CRAFT, TROVE, KTCE |
 
 ---
 
-#### 2.2 🎯 **Specialized LLM-based Reasoning Methods**
+### 📊 Performances of NN-based Methods on MWP datasets
 
-These models are explicitly designed for mathematical reasoning.
+| Cognitive Ability | Method | Math23K | MAWPS | SVAMP | MathQA |
+|------------------|--------|---------|-------|-------|--------|
+| **Problem Understanding** | DNS | 58.1 | 59.2 | 20.0 | / |
+|  | HMS | 76.1 | 80.3 | 17.9 | / |
+|  | Graph2Tree | 77.4 | 83.7 | 31.9 | 69.5 |
+|  | KA-S2T | 76.3 | / | / | / |
+|  | MWP-BERT | 84.7 | 82.9 | / | 76.2 |
+|  | BERT-Tree | 83.3 | 87.2 | 32.4 | 73.8 |
+| **Logical Organization** | GTS | 74.3 | 82.6 | 27.7 | / |
+|  | FOMAS | 84.8 | 88.6 | / | / |
+|  | DEDUCTREASONER | 85.1 | 92.0 | 47.3 | 78.6 |
+| **Associative Memory** | RHMS | 78.6 | 84.9 | / | / |
+|  | REAL | 82.3 | / | / | / |
+| **Critical Thinking** | Generate&Rank | 85.4 | 84.0 | / | / |
+| **Knowledge Learning** | CogSolver | 77.3 | 82.9 | / | / |
+|  | LeAp | 77.9 | 85.2 | 34.1 | / |
 
-| Category | Description | Representative Work |
-|----------|--------------|----------------------|
-| Math-Finetuned LLMs | LLMs specifically trained/tuned for mathematics | Minerva, MathGLM, Qwen-Math |
-| Knowledge-Enhanced Math LLMs | Inject explicit math knowledge (symbolic, formulaic, or theorem-based) | MathCoder, MathReason, Logic-LM |
-| Cognitive-Guided Math LLMs | Architectures inspired by human cognition | MAmmoTH, MetaMath, Think-in-Think |
-| Multi-Agent LLM Reasoning | Collaborative agents with teacher–student or debate roles | MathAgents, Debate LLMs, Socratic Agents |
 
----
+### 📊 Performances of LLM-based Methods on MWP datasets
 
-## 📂 Repository Structure
-
+| Cognitive Ability | Method | Backbone | Math23K | MAWPS | SVAMP | MathQA | GSM8K |
+|------------------|--------|---------|---------|-------|-------|--------|-------|
+| **Logical Organization** | CoT | GPT-3.5 | 85.8 | 91.9 | 88.4 | 79.8 | 87.2 |
+|  | CoT | LLaMA3.1-8B | 83.4 | 92.7 | 88.9 | 80.2 | 87.4 |
+|  | ToT | GPT-3.5 | 86.5 | 92.5 | 89.7 | 80.8 | 88.8 |
+|  | ToT | LLaMA3.1-8B | 84.9 | 93.2 | 90.0 | 81.0 | 89.2 |
+|  | GoT | GPT-3.5 | 86.0 | 93.0 | 90.1 | 80.6 | 87.9 |
+|  | GoT | LLaMA3.1-8B | 84.4 | 93.9 | 90.8 | 81.0 | 88.5 |
+| **Associative Memory** | ICL | GPT-3.5 | 85.9 | 92.8 | 89.9 | 81.1 | 90.8 |
+|  | ICL | LLaMA3.1-8B | 83.7 | 93.3 | 91.0 | 81.5 | 91.3 |
+| **Critical Thinking** | Self-Consistency | GPT-3.5 | 87.0 | 93.1 | 91.7 | 81.4 | 90.5 |
+|  | Self-Consistency | LLaMA3.1-8B | 84.1 | 94.5 | 91.9 | 81.7 | 91.2 |
+|  | Self-Verification | GPT-3.5 | 86.8 | 94.4 | 90.6 | 82.5 | 91.6 |
+|  | Self-Verification | LLaMA3.1-8B | 84.6 | 93.8 | 92.1 | 82.0 | 90.9 |
+| **Tool Integration** | PoT | GPT-3.5 | 88.3 | 95.0 | 93.8 | 84.7 | 92.8 |
+|  | PoT | LLaMA3.1-8B | 85.8 | 95.8 | 93.5 | 85.5 | 92.5 |
+|  | PAL | GPT-3.5 | 87.7 | 95.3 | 92.5 | 83.1 | 93.0 |
+|  | PAL | LLaMA3.1-8B | 86.1 | 96.0 | 93.7 | 82.4 | 93.4 |
+| **Math LLMs** | WizardMath | LLaMA2-7B | 75.2 | 79.5 | 63.2 | 73.5 | 75.1 |
+|  | WizardMath | LLaMA2-70B | 85.8 | 88.6 | 76.4 | 80.1 | 83.8 |
+|  | MetaMath | LLaMA2-7B | 74.4 | 82.4 | 75.8 | 77.6 | 79.2 |
+|  | MetaMath | LLaMA2-70B | 84.5 | 89.3 | 80.6 | 81.0 | 85.3 |
