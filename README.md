@@ -110,3 +110,17 @@ LLM-based solvers utilize language models to perform and explain reasoning. They
 |   |   | LLaMA2-70B | 85.8 | 88.6 | 76.4 | 80.1 | 83.8 |
 |   | MetaMath | LLaMA2-7B | 74.4 | 82.4 | 75.8 | 77.6 | 79.2 |
 |   |   | LLaMA2-70B | 84.5 | 89.3 | 80.6 | 81.0 | 85.3 |
+
+### Citation
+If you find this work useful, please cite our paper:
+```
+@misc{huang2025foundationintelligencereviewmath,
+      title={Foundation of Intelligence: Review of Math Word Problems from Human Cognition Perspective}, 
+      author={Zhenya Huang and Jiayu Liu and Xin Lin and Zhiyuan Ma and Shangzi Xue and Tong Xiao and Qi Liu and Yee Whye Teh and Enhong Chen},
+      year={2025},
+      eprint={2510.21999},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2510.21999}, 
+}
+```
